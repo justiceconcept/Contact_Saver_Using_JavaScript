@@ -1,0 +1,157 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-color: #6e857f;
+  --color: black;
+  --togglebg: blue;
+  --contactIconColor: white;
+  --inputTextColor: black;
+  --deleteIconColor: white;
+  --filter: drop-shadow(-2px -2px 3px whitesmoke)
+    drop-shadow(2px 2px 3px );
+  --roundcolor: blue;
+  --toggleslider: #111;
+  --togglesliderColor: #111;
+}
+
+body {
+  font-family: "Raleway", san-serif;
+  line-height: 1.4;
+  background: var(--bg-color);
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 10px;
+  color: var(--color);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.ListContainer {
+  width: 50%;
+  margin: 56px 30px 0 51px;
+  max-width: 500px;
+  border-radius: 1.25rem;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  background: var(--bg-color);
+  border: 12px solid var(--bg-color);
+  filter: var(--filter);
+}
+
+.person {
+  display: flex;
+  /* justify-content: space-between; */
+  column-gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.person img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contactdetail {
+  margin-right: 5rem;
+}
+
+.contactIcon {
+  margin: 0 10px 0 5px;
+  font-size: 14px;
+  color: var(--contactIconColor);
+}
+
+.person h4 {
+  margin-bottom: 0.35rem;
+}
+
+.person p {
+  margin-bottom: 0;
+}
+
+.delete-contact {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  float: right;
+  display: block;
+  position: absolute;
+  right: 10%;
+}
+
+.delete-contact svg {
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  fill: darkgray;
+}
+
+form {
+  width: 50%;
+  left: 50%;
+  margin-top: 15%;
+  margin-left: 7%;
+  position: fixed;
+}
+
+.name,
+.number,
+.email,
+.img {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 30%;
+  align-items: center;
+  margin-bottom: 30px;
+  background: var(--bg-color);
+  border-radius: 5px;
+  filter: var(--filter);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="tel"] {
+  width: 240px;
+  background: transparent;
+  border: transparent;
+  font-family:"Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 200px;
+  padding: 10px 0;
+  transition: border 0.5s;
+  outline: none;
+  margin-right: 10rem;
+  color: var(--inputTextColor);
+  font-weight: bold;
+}
+.submitbtn {
+    text-decoration: none;
+    color: blue; padding: 10px 40px;
+	border-radius: 5px;
+	background: linear-gradient(to right, #8d68c5, #e34494);
+	display: flex;
+	margin: 40px 0;
+	font-size: 15px;
+    font-family: "Raleway";
+    cursor: pointer;
+}
